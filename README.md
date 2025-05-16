@@ -1,7 +1,7 @@
 # LJ's Events Pack
 Hi!!
 
-THIS IS A ADDON!!!
+## THIS IS A ADDON!!!
 You can put it in `./addons/` OR THE NEW FEATURE `./mods/your-mod/addons/`!!
 
 Thanks for using my events pack, I hope you enjoy it!
