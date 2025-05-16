@@ -3,7 +3,7 @@ Hi!!
 
 Thanks for using my events pack, I hope you enjoy it!
 
-# Features:
+# Events:
 ![all the custom events added](github/events.png)
 <details>
     <summary><h2>Camera Movement</h2></summary>
