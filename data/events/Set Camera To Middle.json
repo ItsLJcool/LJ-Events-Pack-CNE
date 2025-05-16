@@ -1,0 +1,24 @@
+{
+    "params": [
+        {
+            "name": "Camera Target #1",
+            "type": "StrumLine",
+            "defaultValue": 0
+        },
+        {
+            "name": "Camera Target #2",
+            "type": "StrumLine",
+            "defaultValue": 1
+        },
+        {
+            "name": "% Between Position",
+            "type": "Float(0, 1, 1, 2)",
+            "defaultValue": 0.5
+        },
+        {
+            "name": "Move Camera Instantly?",
+            "type": "Bool",
+            "defaultValue": false
+        }
+    ]
+}
