@@ -79,5 +79,6 @@ Thanks for using my events pack, I hope you enjoy it!
 
 ## Events I plan to add in the future:
 
-- [ ] Add Character Change Event
+- [ ] Character Change Event
 - [ ] Stage Switch Event
+- [ ] Cutscene Event
