@@ -9,14 +9,14 @@ Thanks for using my events pack, I hope you enjoy it!
 # Events:
 ![all the custom events added](github/events.png)
 <details>
-    <summary><h2>Camera Movement</h2></summary>
+    <summary><h3>Camera Movement</h3></summary>
     <p>Edited the event so that you can make the camera instantly focus on a character. You can also tween to the character's position. Easing and Time.</p>
     <p>Event parameters are exactly what they mean.</p>
     <img src="github/camera_movement.png" alt="camera movement event parameters">
 </details>
 
 <details>
-    <summary><h2>Change Camera Zoom</h2></summary>
+    <summary><h3>Change Camera Zoom</h3></summary>
     <p>This changes the defaultCamZoom variable to be that value. You can also tween the value.</p>
     <p>Instant - instantly changes the zoom value.</p>
     <p>Additive - adds the value to the current zoom value.</p>
@@ -29,13 +29,13 @@ Thanks for using my events pack, I hope you enjoy it!
 </details>
 
 <details>
-    <summary><h2>Change Note Camera Movement</h2></summary>
+    <summary><h3>Change Note Camera Movement</h3></summary>
     <p>The event pack contains a script that moves the camera when a character is focused on and hits a note. Check out ./songs/ui_notecam.hx for more info.</p>
     <img src="github/change_note_camera_movement.png" alt="change note camera movement event parameters">
 </details>
 
 <details>
-    <summary><h2>Cinematic Event</h2></summary>
+    <summary><h3>Cinematic Event</h3></summary>
     <p>This event shows 2 bars on the top and bottom. (Its rendered with one sprite!! check out the event .hx lol)</p>
     <p>The time is in steps, but toggling Convert Steps to Beats or Convert Steps or Beats into Time will do exactly that.</p>
     <p>Everything else is self explanatory.</p>
@@ -43,28 +43,28 @@ Thanks for using my events pack, I hope you enjoy it!
 </details>
 
 <details>
-    <summary><h2>Fading Event</h2></summary>
+    <summary><h3>Fading Event</h3></summary>
     <p>Fading event can act like a flash event, but with more control the alpha, and time with tweens.</p>
     <p>Events are self explanatory.</p>
     <img src="github/fading_event.png" alt="fading event parameters">
 </details>
 
 <details>
-    <summary><h2>Lyric Event</h2></summary>
+    <summary><h3>Lyric Event</h3></summary>
     <p>This was made for Pillar Funkin! It's a bit complicated to explain here, but it uses a .json in `./songs/your-song/lyric.json`, you can find an example in `./github/`</p>
     <p>Events are self explanatory.</p>
     <img src="github/lyric_event.png" alt="lyric event parameters">
 </details>
 
 <details>
-    <summary><h2>Set Camera To Middle</h2></summary>
+    <summary><h3>Set Camera To Middle</h3></summary>
     <p>This basically acts like the YoshiCrafterEngine's version of the % between 2 characters. Pick 2 strumline's characters, and the float will be point between them.</p>
     <p>Events are self explanatory.</p>
     <img src="github/set_camera_to_middle.png" alt="set camera to middle event parameters">
 </details>
 
 <details>
-    <summary><h2>Set Character Camera Offset</h2></summary>
+    <summary><h3>Set Character Camera Offset</h3></summary>
     <p>This modifies the Character's camera position. You can also tween to the value as well.</p>
     <!--  -->
     <p>Camera Target - The character index of the `strumLine.characters` array to edit.</p>
