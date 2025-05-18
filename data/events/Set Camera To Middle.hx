@@ -1,9 +1,11 @@
 //a
 
+var _eventName = "Set Camera To Middle";
+
 function postCreate() {
     for (event in events) {
-        if (event.name != "Set Camera To Middle") continue;
-        if (event.time > 10) continue;
+        if (event.name != _eventName || event.time > 10) continue;
+        if () continue;
         onEvent({event: event});
         events.remove(event);
     }
@@ -18,7 +20,7 @@ var value = 0.5;
 function onEvent(e) {
     var event = e.event;
     if (event.name == "Camera Movement") return _useEvent = false;
-    if (event.name != "Set Camera To Middle") return;
+    if (event.name != _eventName) return;
     _useEvent = true;
     var params = event.params;
 

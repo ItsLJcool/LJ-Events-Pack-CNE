@@ -1,8 +1,10 @@
 //a
 
+var _eventName = "Change Note Camera Movement";
+
 function onEvent(e) {
     var event = e.event;
-    if (event.name != "Change Note Camera Movement") return;
+    if (event.name != _eventName) return;
 
     var params = event.params;
     var intensity = params[0];

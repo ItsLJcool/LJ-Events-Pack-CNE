@@ -6,6 +6,14 @@ You can put it in `./addons/` OR THE NEW FEATURE `./mods/your-mod/addons/`!!
 
 Thanks for using my events pack, I hope you enjoy it!
 
+## Additional Info:
+
+Since some events might go past the height of the events screen (ahem Cinematic Event), I've added a scrolling feature.
+
+You can use the scroll bar on the right or use the mouse wheel to scroll.
+
+<img src="github/scroll_feature.png" alt="scrolling on the events substate" width=35%>
+
 # Events:
 ![all the custom events added](github/events.png)
 <details>
@@ -39,7 +47,8 @@ Thanks for using my events pack, I hope you enjoy it!
     <p>This event shows 2 bars on the top and bottom. (Its rendered with one sprite!! check out the event .hx lol)</p>
     <p>The time is in steps, but toggling Convert Steps to Beats or Convert Steps or Beats into Time will do exactly that.</p>
     <p>Everything else is self explanatory.</p>
-    <img src="github/cinematic_event.png" alt="cinematic event parameters">
+    <img src="github/cinematic_event_1.png" alt="cinematic event parameters">
+    <img src="github/cinematic_event_2.png" alt="cinematic event parameters">
 </details>
 
 <details>
@@ -77,8 +86,28 @@ Thanks for using my events pack, I hope you enjoy it!
     <img src="github/set_character_camera_offset.png" alt="set character camera offset event parameters">
 </details>
 
+<details>
+    <summary><h3>Shake Camera</h3></summary>
+    <p>Shakes the camera, pretty self explanatory. You can do specific cameras, or all the cameras in the list of rendering cameras.</p>
+    <img src="github/shake_camera.png" alt="shake camera event parameters">
+</details>
+
+<details>
+    <summary><h3>Change Character</h3></summary>
+    <p>This event, personally I won't use, because there is way better ways to do it than an event, but useful for those who can't code in Codename Engine.</p>
+    <p>The Character Index is based on the StrumLine's Characters array, so you can change any character.</p>
+    <!--  -->
+    <p>Precaching the character just preloads the character to a map array. So if the character with the same name is already in the map, it will reference that character and load that one instead.</p>
+    <!--  -->
+    <p>NOW THIS IS IMPORTANT BECAUSE PEOPLE DON'T UNDERSTAND THIS SOMEHOW!!</p>
+    <p>If you change the "x" or "y" param in the `data/character` XML, that is the Charatcer's GLOBAL position!!! This affects where the character is placed in ANY stage. So that's probably why when you switch characters, they are at an offset.</p>
+    <!--  -->
+    <p>To counteract this, the Offset X and Offset Y params are there. They will always apply an offset when the event is called (unless the character you are switching to is already active).</p>
+    <img src="github/change_character.png" alt="change character event parameters">
+</details>
+
 ## Events I plan to add in the future:
 
-- [ ] Character Change Event
+- [X] Character Change Event
 - [ ] Stage Switch Event
 - [ ] Cutscene Event

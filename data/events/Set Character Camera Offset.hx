@@ -1,4 +1,5 @@
 //a
+var _eventName = "Set Character Camera Offset";
 import funkin.backend.system.Logs;
 
 var _characterSnapshots = [];
@@ -8,6 +9,12 @@ function postCreate() {
         for (character in strumline.characters) snaps.push({x: character?.cameraOffset?.x ?? 0, y: character?.cameraOffset?.y ?? 0});
         _characterSnapshots.push(snaps);
     }
+
+    for (e in events) {
+        if (_eventName != e.name || e.time > 10) continue;
+        onEvent({event: e});
+        events.remove(e);
+    }
 }
 
 
@@ -15,7 +22,7 @@ var _offsetsTween:Map<Int, Dynamic> = [];
 
 function onEvent(e) {
     var event = e.event;
-    if (event.name != "Set Character Camera Offset") return;
+    if (event.name != _eventName) return;
 
     // params as variables
     var params = event.params;
