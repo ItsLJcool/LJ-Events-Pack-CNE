@@ -12,7 +12,7 @@ Since some events might go past the height of the events screen (ahem Cinematic 
 
 You can use the scroll bar on the right or use the mouse wheel to scroll.
 
-<img src="github/scroll_feature.png" alt="scrolling on the events substate">
+<img src="github/scroll_feature.png" alt="scrolling on the events substate" width=80%>
 
 # Events:
 ![all the custom events added](github/events.png)
