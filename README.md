@@ -15,7 +15,7 @@ You can use the scroll bar on the right or use the mouse wheel to scroll.
 <img src="github/scroll_feature.png" alt="scrolling on the events substate" width=80%>
 
 # Events:
-![all the custom events added](github/events.png)
+![all the custom events added](github/new_events.png)
 <details>
     <summary><h3>Camera Movement</h3></summary>
     <p>Edited the event so that you can make the camera instantly focus on a character. You can also tween to the character's position. Easing and Time.</p>
