@@ -5,7 +5,6 @@ var _eventName = "Set Camera To Middle";
 function postCreate() {
     for (event in events) {
         if (event.name != _eventName || event.time > 10) continue;
-        if () continue;
         onEvent({event: event});
         events.remove(event);
     }
