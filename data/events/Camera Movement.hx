@@ -23,9 +23,7 @@ function onEvent(e) {
 
     if (easeTime_beats > 0) {
         moveCameraTween?.cancel();
-        moveCameraTween = FlxTween.tween(camFollow, {x: cameraToFocus.x, y: cameraToFocus.y}, (Conductor.crochet / 1000) * easeTime_beats, {ease: _ease, onComplete: () -> {
-            camZooming = true;
-        }});
+        moveCameraTween = FlxTween.tween(camFollow, {x: cameraToFocus.x, y: cameraToFocus.y}, (Conductor.crochet / 1000) * easeTime_beats, {ease: _ease});
     }
 }
 

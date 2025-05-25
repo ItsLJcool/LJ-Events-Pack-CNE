@@ -16,19 +16,39 @@ var _instant = false;
 var cameraTarget_1 = null;
 var cameraTarget_2 = null;
 var value = 0.5;
+
+var cameraMovementTween:FlxTween;
+
 function onEvent(e) {
     var event = e.event;
     if (event.name == "Camera Movement") return _useEvent = false;
     if (event.name != _eventName) return;
-    _useEvent = true;
-    var params = event.params;
+    var params = event.params.copy();
+    var target1 = params.shift();
+    var target2 = params.shift();
 
-    value = params[2];
-    _instant = params[3];
+    value = params.shift();
+    _instant = params.shift();
 
-    cameraTarget_1 = PlayState.instance.strumLines.members[params[0]]?.characters[0]?.getCameraPosition() ?? null;
-    cameraTarget_2 = PlayState.instance.strumLines.members[params[1]]?.characters[0]?.getCameraPosition() ?? null;
+    cameraTarget_1 = PlayState.instance.strumLines.members[target1]?.characters[0]?.getCameraPosition() ?? null;
+    cameraTarget_2 = PlayState.instance.strumLines.members[target2]?.characters[0]?.getCameraPosition() ?? null;
     if (cameraTarget_1 == null || cameraTarget_2 == null) return _useEvent = false;
+    _useEvent = true;
+
+    if (_instant) return;
+
+    var easeTime_beats = params.shift();
+    if (easeTime_beats <= 0) return;
+
+    var easeMode = params.shift();
+    var easeType = params.shift();
+    var _ease = CoolUtil.flxeaseFromString(easeMode, easeType);
+
+    var posX = FlxMath.lerp(cameraTarget_1.x, cameraTarget_2.x, value);
+    var posY = FlxMath.lerp(cameraTarget_1.y, cameraTarget_2.y, value);
+
+    cameraMovementTween?.cancel();
+    cameraMovementTween = FlxTween.tween(camFollow, {x: posX, y: posY}, (Conductor.crochet / 1000) * easeTime_beats, {ease: _ease});
 }
 
 // used with `ui_notecam.hx` in `songs/`
@@ -42,4 +62,9 @@ function onCameraNoteMove(e, addon) {
         FlxG.camera.focusOn(e.position);
         _instant = false;
     }
+}
+
+function onCameraMove(e) {
+    if (cameraMovementTween == null || !cameraMovementTween.active) return;
+    e.cancel();
 }
