@@ -4,6 +4,8 @@ Hi!!
 ## THIS IS A ADDON!!!
 You can put it in `./addons/` OR THE NEW FEATURE `./mods/your-mod/addons/`!!
 
+# DOWNLOAD THE `./data` AND `./images` FOLDER
+
 Thanks for using my events pack, I hope you enjoy it!
 
 ## Additional Info:
